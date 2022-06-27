@@ -1,0 +1,2 @@
+# won't compile with clang
+net-dns/bind-tools compiler-gcc-lto
