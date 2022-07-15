@@ -1,0 +1,685 @@
+sys-libs/libomp hwloc offload ompt
+
+# Required USE flags
+# required by sys-libs/libomp-14.0.4::gentoo[hwloc]
+# required by libomp (argument)
+>=sys-apps/hwloc-2.6.0 abi_x86_32
+# required by sys-devel/llvm-14.0.4::gentoo[libffi]
+# required by media-libs/mesa-22.0.5::gentoo[-video_cards_radeon,-opencl,llvm,-video_cards_r600,-video_cards_radeonsi]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libffi-3.4.2-r1 abi_x86_32
+# required by sys-libs/libomp-14.0.4::gentoo[offload]
+# required by libomp (argument)
+>=sys-devel/llvm-14.0.4 abi_x86_32
+# required by sys-devel/llvm-14.0.4::gentoo
+# required by media-libs/mesa-22.0.5::gentoo[-video_cards_radeon,-opencl,llvm,-video_cards_r600,-video_cards_radeonsi]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-libs/zlib-1.2.12-r2 abi_x86_32
+# required by sys-apps/hwloc-2.6.0::gentoo
+# required by sys-libs/libomp-14.0.4::gentoo[hwloc]
+# required by libomp (argument)
+>=sys-libs/ncurses-6.3_p20220423 abi_x86_32
+# required by sys-devel/llvm-14.0.4::gentoo[xml]
+# required by media-libs/mesa-22.0.5::gentoo[-video_cards_radeon,-opencl,llvm,-video_cards_r600,-video_cards_radeonsi]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libxml2-2.9.14-r1 abi_x86_32
+# required by dev-libs/libxml2-2.9.14-r1::gentoo[icu]
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/icu-71.1-r1 abi_x86_32
+# required by dev-libs/elfutils-0.187::gentoo[lzma]
+# required by virtual/libelf-3::gentoo
+# required by sys-libs/libomp-14.0.4::gentoo[offload]
+# required by libomp (argument)
+>=app-arch/xz-utils-5.2.5-r2 abi_x86_32
+# required by sys-libs/ncurses-6.3_p20220423::gentoo[gpm]
+# required by sys-apps/util-linux-2.37.4::gentoo[ncurses]
+# required by sys-apps/systemd-utils-250.6::gentoo[udev]
+# required by virtual/libudev-232-r7::gentoo[-systemd]
+# required by sys-apps/pciutils-3.8.0::gentoo[udev]
+# required by sys-apps/hwloc-2.6.0::gentoo[pci]
+# required by sys-libs/libomp-14.0.4::gentoo[hwloc]
+# required by libomp (argument)
+>=sys-libs/gpm-1.20.7-r4 abi_x86_32
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/cairo-1.16.0-r5 abi_x86_32
+# required by sys-apps/hwloc-2.6.0::gentoo[pci]
+# required by sys-libs/libomp-14.0.4::gentoo[hwloc]
+# required by libomp (argument)
+>=sys-apps/pciutils-3.8.0 abi_x86_32
+# required by x11-libs/libdrm-2.4.111::gentoo[video_cards_intel]
+# required by x11-libs/libva-2.14.0::gentoo
+# required by media-libs/mesa-22.0.5::gentoo[vaapi]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by media-libs/freeglut-3.2.2::gentoo
+# required by media-libs/libwebp-1.2.2::gentoo[opengl]
+# required by www-client/firefox-101.0.1-r11::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libpciaccess-0.16-r1 abi_x86_32
+# required by x11-libs/cairo-1.16.0-r5::gentoo
+# required by media-libs/harfbuzz-4.2.1::gentoo[cairo]
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/lzo-2.10 abi_x86_32
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/harfbuzz-4.2.1::gentoo[truetype]
+# required by dev-java/openjdk-17.0.3_p7::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/fontconfig-2.13.1-r2 abi_x86_32
+# required by media-libs/harfbuzz-4.2.1::gentoo[truetype]
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-video/vlc-3.0.17.3-r2::gentoo[svg]
+# required by media-libs/phonon-vlc-0.11.3-r1::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[vlc]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/freetype-2.12.0-r1 abi_x86_32
+# required by media-libs/freetype-2.12.0-r1::gentoo[png]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-video/vlc-3.0.17.3-r2::gentoo[svg]
+# required by media-libs/phonon-vlc-0.11.3-r1::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[vlc]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/libpng-1.6.37-r2 abi_x86_32
+# required by x11-libs/cairo-1.16.0-r5::gentoo
+# required by media-libs/harfbuzz-4.2.1::gentoo[cairo]
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=sys-libs/binutils-libs-2.37_p1-r2 abi_x86_32
+# required by x11-libs/cairo-1.16.0-r5::gentoo
+# required by media-libs/harfbuzz-4.2.1::gentoo[cairo]
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/pixman-0.40.0 abi_x86_32
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/glib-2.72.1 abi_x86_32
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/mesa-22.0.5 abi_x86_32
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXrender-0.9.10-r2 abi_x86_32
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/cairo-1.16.0-r5::gentoo
+# required by media-libs/harfbuzz-4.2.1::gentoo[cairo]
+# required by dev-java/openjdk-17.0.3_p7::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXext-1.3.4 abi_x86_32
+# required by x11-libs/cairo-1.16.0-r5::gentoo[X]
+# required by media-libs/harfbuzz-4.2.1::gentoo[cairo]
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libX11-1.7.5 abi_x86_32
+# required by media-libs/mesa-22.0.5::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libxcb-1.15 abi_x86_32
+# required by x11-libs/libxcb-1.15::gentoo
+# required by media-libs/mesa-22.0.5::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXau-1.0.9-r1 abi_x86_32
+# required by x11-libs/libxcb-1.15::gentoo
+# required by media-libs/mesa-22.0.5::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXdmcp-1.1.3-r1 abi_x86_32
+# required by x11-libs/libxcb-1.15::gentoo
+# required by media-libs/mesa-22.0.5::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-base/xcb-proto-1.15 abi_x86_32
+# required by x11-libs/libXdmcp-1.1.3-r1::gentoo
+# required by x11-libs/libxcb-1.15::gentoo
+# required by media-libs/mesa-22.0.5::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libbsd-0.11.6 abi_x86_32
+# required by dev-libs/libbsd-0.11.6::gentoo
+# required by x11-libs/libXdmcp-1.1.3-r1::gentoo
+# required by x11-libs/libxcb-1.15::gentoo
+# required by media-libs/mesa-22.0.5::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=app-crypt/libmd-1.0.4 abi_x86_32
+# required by media-libs/mesa-22.0.5::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/expat-2.4.8 abi_x86_32
+# required by media-libs/mesa-22.0.5::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/libglvnd-1.4.0 abi_x86_32
+# required by media-libs/mesa-22.0.5::gentoo[lm-sensors]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-apps/lm-sensors-3.6.0 abi_x86_32
+# required by media-libs/mesa-22.0.5::gentoo[vaapi]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by media-libs/freeglut-3.2.2::gentoo
+# required by media-libs/libwebp-1.2.2::gentoo[opengl]
+# required by www-client/firefox-101.0.1-r11::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libva-2.14.0 abi_x86_32
+# required by media-libs/mesa-22.0.5::gentoo[vdpau]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libvdpau-1.5 abi_x86_32
+# required by media-libs/mesa-22.0.5::gentoo[wayland]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/wayland-1.20.0 abi_x86_32
+# required by media-libs/mesa-22.0.5::gentoo
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libdrm-2.4.111 abi_x86_32
+# required by media-libs/mesa-22.0.5::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libxshmfence-1.3-r2 abi_x86_32
+# required by media-libs/mesa-22.0.5::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXxf86vm-1.1.4-r2 abi_x86_32
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-libs/mesa-22.0.5::gentoo[vaapi]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by media-libs/freeglut-3.2.2::gentoo
+# required by media-libs/libwebp-1.2.2::gentoo[opengl]
+# required by www-client/firefox-101.0.1-r11::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXfixes-6.0.0 abi_x86_32
+# required by media-libs/tiff-4.3.0::gentoo[zstd]
+# required by x11-libs/gdk-pixbuf-2.42.8::gentoo[tiff]
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=app-arch/zstd-1.5.2 abi_x86_32
+# required by media-libs/mesa-22.0.5::gentoo[X]
+# required by virtual/opengl-7.0-r2::gentoo
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-plugins/gst-plugins-vaapi-1.20.2::gentoo
+# required by media-plugins/gst-plugins-meta-1.20.2::gentoo[vaapi]
+# required by media-libs/phonon-gstreamer-4.10.0::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[gstreamer]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXrandr-1.5.2 abi_x86_32
+# required by dev-libs/glib-2.72.1::gentoo
+# required by media-libs/harfbuzz-4.2.1::gentoo[glib]
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libpcre-8.45-r1 abi_x86_32
+# required by sys-apps/systemd-utils-250.6::gentoo[udev]
+# required by virtual/libudev-232-r7::gentoo[-systemd]
+# required by sys-apps/pciutils-3.8.0::gentoo[udev]
+# required by sys-apps/hwloc-2.6.0::gentoo[pci]
+# required by sys-libs/libomp-14.0.4::gentoo[hwloc]
+# required by libomp (argument)
+>=sys-apps/util-linux-2.37.4 abi_x86_32
+# required by media-libs/freetype-2.12.0-r1::gentoo[bzip2]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-video/vlc-3.0.17.3-r2::gentoo[svg]
+# required by media-libs/phonon-vlc-0.11.3-r1::gentoo
+# required by media-libs/phonon-4.11.1-r1::gentoo[vlc]
+# required by kde-apps/dolphin-21.12.3::gentoo
+# required by @selected
+# required by @world (argument)
+>=app-arch/bzip2-1.0.8-r1 abi_x86_32
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=media-libs/harfbuzz-4.2.1 abi_x86_32
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=gnome-base/librsvg-2.54.3 abi_x86_32
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/gdk-pixbuf-2.42.8 abi_x86_32
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/pango-1.50.7 abi_x86_32
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=dev-libs/fribidi-1.0.12 abi_x86_32
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/cairo-1.16.0-r5::gentoo
+# required by media-libs/harfbuzz-4.2.1::gentoo[cairo]
+# required by dev-java/openjdk-17.0.3_p7::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXft-2.3.4 abi_x86_32
+# required by x11-libs/gdk-pixbuf-2.42.8::gentoo[tiff]
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=media-libs/tiff-4.3.0 abi_x86_32
+# required by media-libs/harfbuzz-4.2.1::gentoo[graphite]
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=media-gfx/graphite2-1.3.14_p20210810-r1 abi_x86_32
+# required by dev-libs/glib-2.72.1::gentoo
+# required by media-libs/harfbuzz-4.2.1::gentoo[glib]
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=virtual/libintl-0-r2 abi_x86_32
+# required by x11-libs/gdk-pixbuf-2.42.8::gentoo[jpeg]
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=virtual/jpeg-100-r1 abi_x86_32
+# required by virtual/jpeg-100-r1::gentoo
+# required by x11-libs/gdk-pixbuf-2.42.8::gentoo[jpeg]
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=media-libs/libjpeg-turbo-2.1.3 abi_x86_32
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=virtual/rust-1.60.0 abi_x86_32
+# required by virtual/rust-1.60.0::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by x11-libs/pango-1.50.7::gentoo[X]
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=dev-lang/rust-bin-1.60.0 abi_x86_32
+# required by dev-libs/glib-2.72.1::gentoo
+# required by media-libs/harfbuzz-4.2.1::gentoo[glib]
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=virtual/libiconv-0-r2 abi_x86_32
+# required by x11-libs/libva-2.14.0::gentoo[X]
+# required by media-libs/mesa-22.0.5::gentoo[vaapi]
+# required by x11-libs/cairo-1.16.0-r5::gentoo[opengl]
+# required by media-libs/harfbuzz-4.2.1::gentoo[cairo]
+# required by x11-libs/pango-1.50.7::gentoo
+# required by gnome-base/librsvg-2.54.3::gentoo
+# required by media-libs/freetype-2.12.0-r1::gentoo[utils,svg]
+# required by media-libs/fontconfig-2.13.1-r2::gentoo
+# required by x11-libs/libXft-2.3.4::gentoo
+# required by kde-plasma/plasma-workspace-5.24.5-r1::gentoo[fontconfig]
+# required by virtual/notification-daemon-0::gentoo[kde]
+# required by x11-libs/libnotify-0.7.9-r1::gentoo
+# required by x11-libs/wxGTK-3.0.4-r302::gentoo[X,libnotify]
+# required by app-arch/p7zip-16.02-r8::gentoo[wxwidgets]
+# required by @selected
+# required by @world (argument)
+>=virtual/opengl-7.0-r2 abi_x86_32
+# required by sys-apps/pciutils-3.8.0::gentoo[udev]
+# required by sys-apps/hwloc-2.6.0::gentoo[pci]
+# required by sys-libs/libomp-14.0.4::gentoo[hwloc]
+# required by libomp (argument)
+>=virtual/libudev-232-r7 abi_x86_32
+# required by virtual/libudev-232-r7::gentoo[-systemd]
+# required by sys-apps/pciutils-3.8.0::gentoo[udev]
+# required by sys-apps/hwloc-2.6.0::gentoo[pci]
+# required by sys-libs/libomp-14.0.4::gentoo[hwloc]
+# required by libomp (argument)
+>=sys-apps/systemd-utils-250.6 abi_x86_32
+# required by sys-apps/systemd-utils-250.6::gentoo[udev]
+# required by virtual/libudev-232-r7::gentoo[-systemd]
+# required by sys-apps/pciutils-3.8.0::gentoo[udev]
+# required by sys-apps/hwloc-2.6.0::gentoo[pci]
+# required by sys-libs/libomp-14.0.4::gentoo[hwloc]
+# required by libomp (argument)
+>=sys-libs/libcap-2.64 abi_x86_32
+# required by sys-libs/libcap-2.64::gentoo[pam]
+# required by sys-apps/systemd-utils-250.6::gentoo[udev]
+# required by virtual/libudev-232-r7::gentoo[-systemd]
+# required by sys-apps/pciutils-3.8.0::gentoo[udev]
+# required by sys-apps/hwloc-2.6.0::gentoo[pci]
+# required by sys-libs/libomp-14.0.4::gentoo[hwloc]
+# required by libomp (argument)
+>=sys-libs/pam-1.5.1_p20210622-r1 abi_x86_32
+# required by sys-libs/libomp-14.0.4::gentoo[offload]
+# required by libomp (argument)
+>=virtual/libelf-3 abi_x86_32
+# required by virtual/libelf-3::gentoo
+# required by sys-libs/libomp-14.0.4::gentoo[offload]
+# required by libomp (argument)
+>=dev-libs/elfutils-0.187 abi_x86_32
+
