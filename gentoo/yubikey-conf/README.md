@@ -1,6 +1,6 @@
 # yubikey conf
 
-Configuration to use yubikey (5 NFC) to authenticate SSH connections and GPG signatures in Gentoo Linux with OpenRC for Git.
+Configuration to use yubikey (5 NFC) to authenticate SSH connections and GPG signatures in Gentoo Linux with OpenRC (KDE) for Git.
 
 # System config
 
@@ -9,9 +9,12 @@ Must install the package `dev-libs/pcsc-lite`.
 Must install the packages `dev-libs/openct` and `dev-libs/opensc` with the `USE=pcsc-lite` flag.  
 Must install the package `app-crypt/yubikey-manager`.
 
+Must enable `gpg-agent` in Plasma Workspace:
+  Edit the file `/etc/xdg/plasma-workspace/env/10-agent-startup.sh` and uncomment `GPG_AGENT=true` and `SSH_AGENT=gpg`
+
 Must set the following in `~/.gnupg/gpg-agent.conf` (with the quote marks):  
-`"pinentry-program /usr/bin/pinentry-qt"`  
-`"enable-ssh-support"`  
+  `"pinentry-program /usr/bin/pinentry-qt"`
+  `"enable-ssh-support"`  
 
 # User config
 
